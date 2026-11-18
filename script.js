@@ -70,7 +70,7 @@ const ps=[...Array(34)].map(()=>{const p=mk();p.y=R(0,H);return p});let boost=1;
 cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillStyle=p.c;cx.globalAlpha=.85;cx.beginPath();cx.ellipse(0,0,p.s,p.s*.6,0,0,7);cx.fill();cx.restore()});requestAnimationFrame(lp)})(0);
 
 // ---- open + letter ----
-const T="Aap meri zindagi ki sabse khoobsurat kahani ho, Disha ji. Safed gulab aapki masoomiyat jaise, aur gulabi gulab aapki muskaan jaise. Har phool mein bas aap hi nazar aati ho. Meri princess, aapke saath har din ek naya gulab khilta hai. 🌹";
+const T="You are the most beautiful story life has ever written for me, Dishaa ji. White roses remind me of your innocence, pink roses of your beautiful smile, and every little flower somehow reminds me of you. My princess, if life were a garden, I would want every season to bloom with you in it. And if I could choose one flower to see every day, it would always be you. 🌷🤍🌹";
 let opened=false;
 svg.addEventListener('click',async()=>{
   if(opened)return;opened=true;svg.classList.add('open');$('tap').classList.add('gone');boost=3.5;
