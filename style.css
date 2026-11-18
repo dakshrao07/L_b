@@ -1,0 +1,29 @@
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{min-height:100svh;font-family:Quicksand,sans-serif;color:#5b1f3d;text-align:center;overflow-x:hidden;
+background:radial-gradient(ellipse at 50% 0,#fff0f6 0,transparent 60%),linear-gradient(180deg,#ffe3ee,#ffc9dd 55%,#f3b1d0);background-attachment:fixed}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;padding:1.6rem 1rem 3rem;gap:.4rem}
+.hi{font-family:Pacifico,cursive;font-size:1.35rem;color:#c2185b;animation:fd 1.4s both}
+.crown{font-size:2.4rem;animation:fl 3s ease-in-out infinite;filter:drop-shadow(0 4px 8px #ffb70388)}
+@keyframes fl{50%{transform:translateY(-6px) rotate(4deg)}}
+@keyframes fd{from{opacity:0;transform:translateY(-14px)}}
+#bq{width:min(88vw,380px);overflow:visible;cursor:pointer;filter:drop-shadow(0 16px 20px #8a2f6b44)}
+.sway{transform-origin:200px 440px;animation:sw 5s ease-in-out infinite}
+@keyframes sw{0%,100%{transform:rotate(-1.4deg)}50%{transform:rotate(1.4deg)}}
+.rose{transform-box:fill-box;transform-origin:50% 60%;transform:scale(0) rotate(-40deg);opacity:0}
+.open .rose{animation:bl 1.4s cubic-bezier(.3,1.5,.5,1) forwards;animation-delay:var(--d)}
+@keyframes bl{to{transform:scale(1) rotate(0);opacity:1}}
+.bud{transform-box:fill-box;transform-origin:50% 60%;animation:bud 2.6s ease-in-out infinite}
+@keyframes bud{50%{transform:scale(1.06)}}
+.open .bud{animation:none}
+.fill{transform-box:fill-box;transform-origin:50% 100%;opacity:0;transform:scale(.3)}
+.open .fill{animation:bl 1.2s ease-out forwards;animation-delay:var(--d)}
+.tap{opacity:.8;animation:pu 1.8s infinite}
+@keyframes pu{50%{opacity:.35}}
+.open~.tap,.tap.gone{display:none}
+.letter{max-width:380px;background:#fffafcf2;border-radius:24px;padding:1.5rem 1.3rem;box-shadow:0 14px 40px #b0306a44;opacity:0;transform:translateY(26px) scale(.96);transition:all 1.1s;pointer-events:none;margin-top:.6rem;border:2px solid #ffd0e3}
+.letter.on{opacity:1;transform:none}
+h1{font-family:Pacifico,cursive;font-weight:400;color:#d6336c;font-size:1.9rem;margin-bottom:.7rem}
+#txt{line-height:1.75;font-weight:700;min-height:11em;text-align:left;font-size:1.02rem}
+.sign{display:block;margin-top:1rem;font-family:Pacifico,cursive;color:#d6336c;font-size:1.25rem;opacity:0;transition:opacity 1.5s}
+.sign.on{opacity:1}
